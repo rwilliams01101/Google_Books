@@ -1,10 +1,12 @@
+// We require the needed packages, and require everything in the routes folder
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+// Declare a dynamic port depending on the env
 const PORT = process.env.PORT || 3002;
 
+// Middleware 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
